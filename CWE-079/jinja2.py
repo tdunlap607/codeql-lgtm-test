@@ -13,10 +13,6 @@ def render_response_from_env(env):
     template = env.get_template('template.html')
     return make_response(template.render(name=name))
 
-@app.route('/unsafe')
-def unsafe():
-    return render_response_from_env(unsafe_env)
-
 @app.route('/safe1')
 def safe1():
     return render_response_from_env(safe1_env)
@@ -25,3 +21,6 @@ def safe1():
 def safe2():
     return render_response_from_env(safe2_env)
 
+@app.route('/unsafe')
+def unsafe():
+    return render_response_from_env(unsafe_env)
