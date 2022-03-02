@@ -4,7 +4,7 @@ from jinja2 import Environment, select_autoescape, FileSystemLoader
 app = Flask(__name__)
 loader = FileSystemLoader( searchpath="templates/" )
 
-unsafe_env = Environment(loader=loader)
+unsafe_env = Environment(loader=loader, autoescape=True)
 safe1_env = Environment(loader=loader, autoescape=True)
 safe2_env = Environment(loader=loader, autoescape=select_autoescape())
 
