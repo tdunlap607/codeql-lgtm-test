@@ -18,8 +18,8 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ main ]
   schedule:
-    # Run every 12 hours
-    - cron: '0 */12 * * *'
+    # Run every 1 hour
+    - cron: '0 */1 * * *'
 
 jobs:
   analyze:
