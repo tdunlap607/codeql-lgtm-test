@@ -8,6 +8,6 @@ def safe():
     return make_response("Your name is " + escape(first_name))
         
 @app.route('/unsafe')
-def unsafe_RENAME():
+def unsafe():
     first_name = request.args.get('name', '')
-    return make_response("Your name is " + escape(first_name))
+    return make_response("Your name is " + first_name)
